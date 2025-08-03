@@ -18,6 +18,12 @@ public class WaterGameManager : MonoBehaviour
         {
             isGameOver = true; // Set the game over flag to true
             Debug.Log("Maximum score reached!"); // Log a message to the console
+            
+            #if UNITY_EDITOR
+              UnityEditor.EditorApplication.isPlaying = false;
+            #else
+              Application.Quit();
+            #endif
             return; // Exit the method if the maximum score is reached
         }
         score++;
