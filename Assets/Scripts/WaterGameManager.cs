@@ -14,7 +14,7 @@ public class WaterGameManager : MonoBehaviour
 
     public void IncreaseScore()
     {
-        if (score >= 10) // Check if the score is already at the maximum
+        if (score >= 5) // Check if the score is already at the maximum
         {
             isGameOver = true; // Set the game over flag to true
             Debug.Log("Maximum score reached!"); // Log a message to the console
